@@ -1,0 +1,73 @@
+@mixin imgWidth($width) {
+  width: $width;
+  height: $width;
+  user-select: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  .App-header, .App-footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .App-header {
+    .App-logo {
+      @include imgWidth(10rem);
+      transition: 250ms ease;
+
+      &:hover {
+        transform: rotate(-25deg);
+      }
+    }
+    
+    .name {
+      text-align: center;
+
+      .name-title {
+        font-size: 32px;
+        font-weight: 600;
+      }
+
+      .name-subtitle {
+        color: var(--color-text--subtle);
+        font-size: 14px;
+      }
+    }
+
+    .links {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 24px;
+
+      .link a {
+        color: var(--color-surface-0);
+        font-size: 14px;
+        padding: 3px 6px;
+        border-radius: 6px;
+        background-color: var(--color-primary);
+        transition: 250ms ease;
+
+        &:hover {
+          background-color: var(--color-text--subtle);
+        }
+      }
+    }
+  }
+
+  .App-footer {
+    margin-top: 5rem;
+
+    a {
+      transition: 250ms ease;
+      
+      &:hover {
+        color: var(--color-text--subtle);
+      }
+    }
+  }
+}

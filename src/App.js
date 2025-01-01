@@ -12,7 +12,7 @@ function App() {
         </div>
         <div className="links">
           <div className="link">
-            <a href="https://space.bilibili.com/390831920k">B 站</a>
+            <a href="https://space.bilibili.com/390831920">B 站</a>
           </div>
           <div className="link">
             <a href="https://www.hydcraft.cn">氢气工艺</a>
